@@ -55,3 +55,19 @@ There is no install step.
 - [ ] It is under 30 lines and contains no secret or private machine detail.
 - [ ] `/context` shows the project memory loaded in a fresh session.
 - [ ] Tests still pass and no file except `CLAUDE.md` changed.
+
+<!-- mastery-kit:start -->
+## How to know you nailed it
+
+[![Mastery checks](https://github.com/kodenvibekenya/claude-project-instructions-lab/actions/workflows/mastery.yml/badge.svg)](https://github.com/kodenvibekenya/claude-project-instructions-lab/actions/workflows/mastery.yml)
+
+Open [MASTERY.md](MASTERY.md), then run:
+
+```sh
+npm test
+```
+
+The untouched challenge is expected to start red. Keep the failures visible while you work; make the implementation satisfy the checks instead of deleting, skipping, or weakening them.
+
+A project is complete only when the automated checks, real-use/manual checks, and all three explain-back prompts pass. The [free KODE Ń VIBE mastery guide](https://kodenvibe.tech/notes/mastery/) explains why a green check alone is not enough.
+<!-- mastery-kit:end -->
