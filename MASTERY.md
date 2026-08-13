@@ -1,8 +1,25 @@
-# Mastery check — Claude Code Project 2 — Make project instructions useful
+# Automated project grade — Claude Code Project 2 — Make project instructions useful
 
-“Nailed it” is a three-gate decision. You must pass **all three** gates; a green automated run alone is not mastery.
+GitHub grades this project without waiting for a KODE Ń VIBE reviewer.
 
-## Gate 1 — Automated project checks
+## The pass rule
+
+- **PASS — Nailed it:** every required check passes in one run.
+- **REVISE — Keep building:** one or more required checks fail.
+
+There is no averaging and no partial-pass score. Do not delete, skip, rename, or weaken a check. Fix the project, push again, and GitHub replaces the result with a new grade for that commit.
+
+## Automatic learner flow
+
+1. On the KODE Ń VIBE starter, choose **Use this template** to create your own repository.
+2. Create an attempt branch, for example `git switch -c attempt/my-project`. Keep the untouched starter on `main`.
+3. Build the acceptance checklist, commit, and push the attempt branch. GitHub Actions starts the grade automatically; opening or updating a pull request to `main` is graded too.
+4. Open **Actions → Automated project grade**. Read the failed check names and logs if the result says **REVISE**.
+5. When the job summary says **PASS — NAILED IT**, save that run link as evidence.
+
+Every repository's `main` branch is intentionally quiet, so unfinished starter code does not send false failure alerts. Grading starts automatically when you push an attempt branch or open a pull request to `main`.
+
+## Run the same grade locally
 
 From the repository root, run:
 
@@ -16,31 +33,30 @@ Every check must pass without skipping, deleting, or weakening a check.
 - [ ] Its boundaries forbid dependencies, network use, and hiding failures, and its definition of done asks for changed files, test evidence, and uncertainty.
 - [ ] The dependency-free initials implementation and its original tests still pass.
 
-These checks cover selected functional and structural criteria. They do **not** claim to judge visual quality, usability, or accessibility conformance.
+These checks cover selected functional and structural criteria. The individual test names are the grading rubric; a failed name identifies what to revise.
 
-## Gate 2 — Applicable manual browser and accessibility checks
+## Optional confidence check — not graded
 
-- [ ] **Not applicable, with reason recorded:** This project has no browser interface, so the browser/accessibility gate is not applicable; record that reason rather than inventing a browser result.
+No reviewer is required for the automated pass. These quick checks are still worth doing because code tests cannot see every visual, usability, or accessibility problem:
 
-## Gate 3 — Explain back
+This project has no browser interface. A browser check is not relevant here.
 
-Answer all three prompts in your own words. Each answer passes when it is accurate, points to concrete evidence in this project, and explains the reason or trade-off—not merely what a line says. A peer, mentor, or reviewer should ask one follow-up where an answer is unclear and record pass/revise for every prompt.
+## Optional explain-back — not graded
+
+Use these prompts to check your own understanding. They do not need a reviewer and they do not change the GitHub grade.
 
 1. Which instruction in your CLAUDE.md prevents the most likely scope mistake, and how can a reviewer check it?
 2. Why is CLAUDE.md useful context but not a permission or security boundary?
 3. What did a fresh /context check establish, and what can it not establish?
 
-## Evidence record
+## Evidence to keep
 
-Keep this short record in an issue, pull request, or learning log:
+GitHub keeps the commit, logs, and grade automatically. Save only:
 
-- Commit checked:
-- Automated command, date/time, and result:
-- Manual check environment and result for each item (or the documented not-applicable reason):
-- Explain-back reviewer and pass/revise result for prompts 1–3:
-- Help, tools, examples, or references used:
-- Remaining limitation or next improvement:
+- the commit SHA;
+- the successful Actions run URL; and
+- one sentence about what you would improve next.
 
 ## Honest boundary
 
-This is formative practice, not a certification or proof of independent authorship. The repository owner can edit both code and visible checks, so CI records evidence about one revision rather than guaranteeing mastery. Manual observations and explain-back review remain necessary, and no single project demonstrates complete accessibility or professional readiness.
+**PASS means every published requirement checked by this project passed on one revision.** It is formative evidence, not a certificate or proof of independent authorship. A learner controls their copy and can edit visible tests or workflows, and automation cannot prove complete usability, accessibility, durable understanding, or professional readiness. Keep the supplied checks unchanged if you want the result to remain meaningful.
